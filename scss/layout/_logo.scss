@@ -1,0 +1,8 @@
+.logo {
+  @media screen and (min-width: 480px) {
+    color: white;
+  }
+  @media screen and (max-width: 1199px) {
+    color: black;
+  }
+}

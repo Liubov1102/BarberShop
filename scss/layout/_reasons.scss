@@ -1,0 +1,120 @@
+.reasons {
+  &__container {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+  &__pre-title {
+    display: flex;
+    align-items: center;
+    font-style: 400;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #303030;
+    margin-bottom: 20px;
+    &::before {
+      content: " ";
+      left: 0;
+      height: 1px;
+      width: 60px;
+      margin-right: 20px;
+      background: #303030;
+    }
+  }
+  &__title {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: #303030;
+    margin-bottom: 20px;
+  }
+  &__pre-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: #555555;
+    margin-bottom: 44px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    background: #f7f7f7;
+    padding: 20px;
+    height: 133px;
+    @media screen and (min-width: 480px) {
+      width: 193px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 210px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
+  }
+  &__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+  &__item:nth-child(even) {
+    margin-top: 30px;
+  }
+  &__count {
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #303030;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__count::after {
+    content: "+";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.38;
+    text-align: center;
+    color: #ff6c00;
+  }
+
+  &__item-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: center;
+    color: #303030;
+  }
+}
+/*.reasons-left {
+  display: flex;
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
+}*/
+.reasons-right {
+  @media screen and (min-width: 768px) {
+    max-width: 500px;
+  }
+}
+.reasons-left__tab {
+  @media screen and (min-width: 768px) {
+    margin-left: 240px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 90px;
+  }
+}
