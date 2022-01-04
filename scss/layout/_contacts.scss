@@ -90,18 +90,20 @@
     }
   }
   &__item {
-    align-items: center;
+    display: flex;
+    align-items: baseline;
   }
   &__item:not(:last-child) {
     margin-bottom: 20px;
   }
   &__link {
+    display: flex;
+    align-items: center;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: #9da4bd;
-    align-items: center;
   }
   &__icon {
     margin-right: 16px;
