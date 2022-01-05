@@ -27,22 +27,23 @@
   &__icon {
     margin-right: 6px;
   }
-  &__list {
-    display: flex;
-    align-items: center;
-    margin-bottom: 35px;
-    @media screen and (min-width: 768px) {
-      margin-bottom: 0px;
-    }
-    &::before {
-      content: " ";
-      left: 0;
-      height: 1px;
-      width: 60px;
-      margin-right: 40px;
-      background: #303030;
-    }
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
   }
+  &::before {
+    content: " ";
+    left: 0;
+    height: 1px;
+    width: 60px;
+    margin-right: 40px;
+    background: #303030;
+  }
+
   &__item:not(:last-child) {
     margin-right: 40px;
   }

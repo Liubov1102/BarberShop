@@ -1,8 +1,13 @@
 .logo {
-  @media screen and (min-width: 480px) {
-    color: white;
+  @media screen and (max-width: 479px) {
+    fill: white;
   }
-  @media screen and (max-width: 1199px) {
-    color: black;
+  @media screen and (min-width: 480px) {
+    fill: white;
+  }
+  @media screen and (min-width: 768px) {
+    fill: black;
+    transform: rotate(90deg);
+    margin-top: 0;
   }
 }

@@ -33,6 +33,20 @@
       margin-left: 0px;
     }
   }
+  &__mobile {
+    width: 194px;
+    margin-top: 24px;
+    margin-bottom: 64px;
+  }
+  &__header {
+    color: #ffffff;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 40px;
+    }
+  }
 }
 .button__hero {
   display: inline-flex;
