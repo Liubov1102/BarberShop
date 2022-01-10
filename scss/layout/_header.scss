@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  position: relative;
 }
 .header-right {
   margin-left: auto;
@@ -47,7 +48,7 @@
     margin-right: 0px;
   }
   @media screen and (min-width: 1200px) {
-    width: 1075px;
+    width: 1000px;
     height: 680px;
 
     padding-left: 40px;
@@ -82,12 +83,12 @@
   padding-bottom: 50px;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
+  right: 0;
+  width: 350px;
   height: 100vh;
   background-color: #ffffff;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+  transition: transform 250ms linear;
   z-index: 999;
   .mob-menu {
     display: flex;
@@ -97,41 +98,40 @@
   }
 }
 .menu-container.is-open {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .menu-container__batton-menu {
   position: absolute;
   top: 30px;
   right: 40px;
-  color: var(--title-text-color);
 }
 
 .mobile-menu-list {
   &__link {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.39;
+    @include font(600, 18px, 1.39, 0.1em);
     text-align: center;
-    letter-spacing: 0.1em;
     color: #303030;
+    transition: color 250ms linear;
+    &:hover,
+    &:focus {
+      color: #ff6c00;
+    }
   }
   &__item {
     margin-bottom: 24px;
-  }
-
-  &__link--current {
-    color: #ff6c00;
   }
 }
 
 .mobile-menu-contacts {
   &__link {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.39;
-    letter-spacing: 0.1em;
+    @include font(600, 18px, 1.39, 0.1em);
     text-transform: uppercase;
     color: #303030;
+    transition: color 250ms linear;
+    &:hover,
+    &:focus {
+      color: #ff6c00;
+    }
   }
 }
 .mobile-menu-social {
@@ -155,11 +155,13 @@
     background: #303030;
   }
   &__link {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.36;
-    letter-spacing: 0.2em;
+    @include font(600, 14px, 1.36, 0.2em);
     color: #303030;
+    transition: color 250ms linear;
+    &:hover,
+    &:focus {
+      color: #ff6c00;
+    }
   }
 }
 
@@ -180,11 +182,13 @@
     margin-right: 24px;
   }
   &__link {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
+    @include font(600, 12px, 1.33, 0.1em);
     color: #ffffff;
+    transition: color 250ms linear;
+    &:hover,
+    &:focus {
+      color: #ff6c00;
+    }
   }
 }
 .nav-contacts {
@@ -200,10 +204,8 @@
   }
 }
 .header-left {
-  width: 680px;
-  height: 68px;
   padding-left: 40px;
-  padding-right: 31px;
+  padding-right: 35px;
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -212,12 +214,12 @@
     position: absolute;
     display: flex;
     transform: rotate(-90deg);
-    right: 45%;
-    bottom: 53%;
+    right: 66%;
+    bottom: 16%;
     background: #ffffff;
   }
   @media screen and (min-width: 1200px) {
-    right: 70%;
-    bottom: 53%;
+    right: 79%;
+    bottom: 16%;
   }
 }

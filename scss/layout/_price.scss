@@ -38,23 +38,12 @@
     justify-content: center;
   }
   &__pre-title {
-    display: flex;
-    align-items: center;
-    font-family: Raleway;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include font(600, 11px, 1.36, 0.1em);
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.6);
     margin-bottom: 20px;
   }
   &__pre-title::before {
-    content: " ";
-    left: 0;
-    height: 1px;
-    width: 60px;
-    margin-right: 20px;
     background: rgba(157, 164, 189, 0.6);
   }
   &__mob {
@@ -112,26 +101,20 @@
     justify-content: space-between;
   }
   &__title {
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
+    font-family: Raleway;
+    @include font(700, 42px, 1.17, 0.05em);
     color: #ffffff;
     margin-bottom: 44px;
   }
   &__text {
+    @include font(400, 14px, 2.14, 0.02em);
     display: flex;
     align-items: baseline;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 2.14;
-    letter-spacing: 0.02em;
     color: #9da4bd;
     margin-bottom: 20px;
 
     @media screen and (min-width: 768px) {
-      font-size: 18px;
-      line-height: 1.67;
+      @include font(400, 18px, 1.67, 0.02em);
     }
   }
   &__text::after {
@@ -144,10 +127,7 @@
   }
 
   &__tag {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 2.14;
-    letter-spacing: 0.02em;
+    @include font(400, 14px, 2.14, 0.02em);
     color: #9da4bd;
   }
 }

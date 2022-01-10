@@ -66,11 +66,7 @@
 
   &__title {
     font-family: Raleway;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-
-    letter-spacing: 0.05em;
+    @include font(700, 42px, 1.17, 0.05em);
     color: #ffffff;
     margin-bottom: 40px;
     @media screen and (min-width: 480px) {
@@ -99,39 +95,23 @@
   &__link {
     display: flex;
     align-items: center;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
+    @include font(400, 18px, 1.67, 0.02em);
     color: #9da4bd;
   }
   &__icon {
     margin-right: 16px;
   }
   &__pre-title {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include font(600, 11px, 1.36, 0.1em);
     text-transform: uppercase;
     color: #ffffff;
     margin-bottom: 20px;
     &::before {
-      content: " ";
-      left: 0;
-      height: 1px;
-      width: 60px;
-      margin-right: 20px;
       background: rgba(157, 164, 189, 0.4);
     }
   }
   &__pre-text {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
+    @include font(400, 18px, 1.67, 0.02em);
     color: #9da4bd;
   }
 }

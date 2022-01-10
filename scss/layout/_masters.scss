@@ -8,29 +8,19 @@
     }
   }
   &__pre-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include font(600, 11px, 1.36, 0.1em);
+
     text-transform: uppercase;
     color: #303030;
     margin-bottom: 20px;
 
     &::before {
-      content: " ";
-      left: 0;
-      height: 1px;
-      width: 60px;
-      margin-right: 20px;
       background: #303030;
     }
   }
   &__title {
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
-
+    font-family: Raleway;
+    @include font(700, 42px, 1.17, 0.05em);
     color: #303030;
     margin-bottom: 44px;
   }
@@ -70,20 +60,14 @@
     padding-bottom: 0px;
   }
   &__title {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.39;
+    @include font(400, 18px, 1.39, 0.02em);
     text-align: center;
-    letter-spacing: 0.02em;
     color: #303030;
     margin-bottom: 8px;
   }
   &__text {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.36;
+    @include font(400, 14px, 1.36, 0.02em);
     text-align: center;
-    letter-spacing: 0.02em;
     color: #ff6c00;
     margin-bottom: 30px;
   }
