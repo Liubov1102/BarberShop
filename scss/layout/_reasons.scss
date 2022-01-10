@@ -35,6 +35,11 @@
     background: #f7f7f7;
     padding: 20px;
     height: 133px;
+
+    @media screen and (max-width: 479px) {
+      width: 210px;
+    }
+
     @media screen and (min-width: 480px) {
       width: 193px;
     }
@@ -50,6 +55,11 @@
   }
   &__item:nth-child(even) {
     margin-top: 30px;
+  }
+  &__item:nth-child(3) {
+    @media screen and (max-width: 479px) {
+      margin-top: 30px;
+    }
   }
   &__count {
     @include font(700, 42px, 1.36, 0.05em);

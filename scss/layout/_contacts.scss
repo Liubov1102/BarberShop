@@ -31,6 +31,10 @@
       background-image: url(../images/cont-d-2.png);
     }
   }
+  @media screen and (max-width: 479px) {
+    padding: 30px 15px 30px 15px;
+    width: 320px;
+  }
   @media screen and (min-width: 480px) {
     padding: 84px 31px 84px 31px;
     width: 480px;

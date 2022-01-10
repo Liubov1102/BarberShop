@@ -1,7 +1,9 @@
 .hero {
-  width: 306px;
-  margin-bottom: 183px;
-  margin-top: 112px;
+  @media screen and (min-width: 480px) {
+    width: 306px;
+    margin-bottom: 183px;
+    margin-top: 112px;
+  }
   @media screen and (min-width: 768px) {
     width: 349px;
     padding-left: 48px;
