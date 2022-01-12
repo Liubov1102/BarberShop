@@ -100,6 +100,14 @@
     align-items: baseline;
     justify-content: space-between;
   }
+  &__item::before {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: rgba(157, 164, 189, 0.12);
+    margin-left: 6px;
+    margin-right: 6px;
+  }
   &__title {
     font-family: Raleway;
     @include font(700, 42px, 1.17, 0.05em);
@@ -112,22 +120,17 @@
     align-items: baseline;
     color: #9da4bd;
     margin-bottom: 20px;
+    order: -1;
 
     @media screen and (min-width: 768px) {
       @include font(400, 18px, 1.67, 0.02em);
     }
   }
-  &__text::after {
-    content: "";
-    background: rgba(157, 164, 189, 0.12);
-    height: 1px;
-    width: 74px;
-    margin-left: 6px;
-    margin-right: 6px;
-  }
-
   &__tag {
     @include font(400, 14px, 2.14, 0.02em);
     color: #9da4bd;
+    @media screen and (min-width: 768px) {
+      @include font(400, 18px, 1.67, 0.02em);
+    }
   }
 }

@@ -83,7 +83,6 @@ ul {
 }
 @media screen and (max-width: 479px) {
   .container {
-    width: 320px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -207,23 +206,32 @@ ul {
   display: flex;
   position: relative;
 }
-
-.header-right {
-  margin-left: auto;
-  margin-right: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url(../images/hero-m-1.jpg);
-  padding-top: 40px;
+@media screen and (max-width: 767px) {
+  .header {
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/hero-m-1.jpg);
+  }
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .header-right {
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .header {
     background-image: url(../images/hero-m-2.jpg);
   }
 }
+
+.header-right {
+  padding-top: 40px;
+}
 @media screen and (min-width: 768px) {
   .header-right {
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-image: url(../images/hero-t-1.jpg);
   }
 }
@@ -244,15 +252,11 @@ ul {
 }
 @media screen and (max-width: 479px) {
   .header-right {
-    width: 320px;
     height: 580px;
-    padding-right: 15px;
-    padding-left: 15px;
   }
 }
 @media screen and (min-width: 480px) {
   .header-right {
-    width: 480px;
     height: 580px;
     padding-right: 31px;
     padding-left: 31px;
@@ -485,6 +489,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .hero {
+    margin-bottom: 183px;
+    margin-top: 112px;
+  }
+}
 @media screen and (min-width: 480px) {
   .hero {
     width: 306px;
@@ -600,7 +610,7 @@ ul {
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 @media screen and (min-width: 768px) {
   .about {
@@ -631,7 +641,7 @@ ul {
   }
 }
 .about-list__item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .about-list__item {
   margin-right: 30px;
@@ -751,6 +761,14 @@ ul {
   align-items: baseline;
   justify-content: space-between;
 }
+.price__item::before {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: rgba(157, 164, 189, 0.12);
+  margin-left: 6px;
+  margin-right: 6px;
+}
 .price__title {
   font-family: Raleway;
   font-weight: 700;
@@ -769,6 +787,7 @@ ul {
   align-items: baseline;
   color: #9da4bd;
   margin-bottom: 20px;
+  order: -1;
 }
 @media screen and (min-width: 768px) {
   .price__text {
@@ -778,20 +797,20 @@ ul {
     letter-spacing: 0.02em;
   }
 }
-.price__text::after {
-  content: "";
-  background: rgba(157, 164, 189, 0.12);
-  height: 1px;
-  width: 74px;
-  margin-left: 6px;
-  margin-right: 6px;
-}
 .price__tag {
   font-weight: 400;
   font-size: 14px;
   line-height: 2.14;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+@media screen and (min-width: 768px) {
+  .price__tag {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1161,7 +1180,7 @@ ul {
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(157, 164, 189, 0.4);
+  color: #ffffff;
   background-color: transparent;
   outline: none;
   border: none;

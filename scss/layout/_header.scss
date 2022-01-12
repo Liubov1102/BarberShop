@@ -1,23 +1,29 @@
 .header {
   display: flex;
   position: relative;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-image: url(../images/hero-m-1.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero-m-2.jpg);
+    }
+  }
 }
 .header-right {
-  margin-left: auto;
-  margin-right: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  background-image: url(../images/hero-m-1.jpg);
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/hero-m-2.jpg);
-  }
-
   @media screen and (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-image: url(../images/hero-t-1.jpg);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -36,13 +42,9 @@
   padding-top: 40px;
 
   @media screen and (max-width: 479px) {
-    width: 320px;
     height: 580px;
-    padding-right: 15px;
-    padding-left: 15px;
   }
   @media screen and (min-width: 480px) {
-    width: 480px;
     height: 580px;
     padding-right: 31px;
     padding-left: 31px;

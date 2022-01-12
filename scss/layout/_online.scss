@@ -42,13 +42,14 @@
     }
   }
 }
+
 .online-input,
 .online-text {
   width: 100%;
   @include font(600, 11px, 1.36, 0.1em);
 
   text-transform: uppercase;
-  color: rgba(157, 164, 189, 0.4);
+  color: #ffffff;
   background-color: transparent;
   outline: none;
   border: none;
